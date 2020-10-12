@@ -14,7 +14,7 @@ export class ProductAddComponent implements OnInit {
   productForm: FormGroup;
 
   constructor(private fb: FormBuilder,
-    private productStore: Store<ProductState>
+              private productStore: Store<ProductState>
   ) { }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class ProductAddComponent implements OnInit {
 
   addProduct(): void {
     // this.productService.addProduct(this.productForm.getRawValue());
-    this.productStore.dispatch(AddProduct({ product: this.productForm.getRawValue() }))
+    this.productStore.dispatch(AddProduct({ product: this.productForm.getRawValue() }));
   }
 
 }

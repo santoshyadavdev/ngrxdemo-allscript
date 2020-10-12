@@ -8,7 +8,7 @@ import { Product } from './product';
 export class ProductService {
 
   productList: Product[] = [];
-  cartList: Product[] = []
+  cartList: Product[] = [];
 
   products$ = new BehaviorSubject<Product[]>([]);
   cart$ = new BehaviorSubject<Product[]>([]);

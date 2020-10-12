@@ -35,7 +35,7 @@ export const productReducer = createReducer(initialState,
     on(GetProductListSuccess, (state, { prodList }) => ({
         ...state,
         products: prodList
-        // products : 
+        // products :
     }))
 );
 
