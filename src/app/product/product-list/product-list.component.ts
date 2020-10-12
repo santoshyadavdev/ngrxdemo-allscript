@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Product } from '../services/product';
+import { AddProductToCart } from '../state/product.action';
+import { ProductState } from '../state/product.reducer';
 
 @Component({
   selector: 'app-product-list',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
+  displayedColumns: string[] = ['name', 'category', 'price', 'description', 'actions'];
+  @Input() prodList: Product[] = [];
+  constructor(private productStore: Store<ProductState>) { }
 
   ngOnInit(): void {
+  }
+
+  addToCart(product: Product) {
+    this.productStore.dispatch(AddProductToCart({ product }));
   }
 
 }
