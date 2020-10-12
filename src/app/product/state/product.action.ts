@@ -7,11 +7,11 @@ export const AddProduct = createAction('[Product] Add Product',
 
 export const GetProductList = createAction('[Product] Get Product');
 
-export const GetProductListSuccess = createAction('[Product] Get Product',
+export const GetProductListSuccess = createAction('[Product] Get Product Success',
     props<{ prodList: Product[] }>());
 
 
-export const GetProductListFailure = createAction('[Product] Get Product',
+export const GetProductListFailure = createAction('[Product] Get Product Failure',
     props<{ error: string }>());
 
 export const AddProductToCart = createAction('[Product] Get Cart Product',

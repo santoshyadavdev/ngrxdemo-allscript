@@ -13,9 +13,9 @@ import { getProductList } from './state/product.selector';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private productStore: Store<ProductState>) { }
-
   productList$: Observable<Product[]> = this.productStore.select(getProductList);
+
+  constructor(private productStore: Store<ProductState>) { }
 
   ngOnInit() {
     this.productStore.dispatch(GetProductList());
