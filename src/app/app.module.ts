@@ -24,7 +24,11 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({}, {
+      runtimeChecks  :{
+        strictActionTypeUniqueness : true
+      }
+    }),
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
