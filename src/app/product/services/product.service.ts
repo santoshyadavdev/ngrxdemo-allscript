@@ -7,18 +7,18 @@ import { Product } from './product';
 })
 export class ProductService {
 
-  productList: Product[] = [];
-  cartList: Product[] = [];
+  // productList: Product[] = [];
+  // cartList: Product[] = [];
 
-  products$ = new BehaviorSubject<Product[]>([]);
-  cart$ = new BehaviorSubject<Product[]>([]);
+  // products$ = new BehaviorSubject<Product[]>([]);
+  // cart$ = new BehaviorSubject<Product[]>([]);
 
   constructor() { }
 
-  addProduct(product: Product) {
-    this.productList.push(product);
-    return this.products$.next(this.productList);
-  }
+  // addProduct(product: Product) {
+  //   this.productList.push(product);
+  //   return this.products$.next(this.productList);
+  // }
 
   // getProductList(): Observable<Product[]> {
   //   return this.products$.asObservable();
@@ -35,13 +35,13 @@ export class ProductService {
     return of(productList);
   }
 
-  addProductToCart(cartProduct: Product) {
-    this.cartList.push(cartProduct);
-    this.cart$.next(this.cartList);
-  }
+  // addProductToCart(cartProduct: Product) {
+  //   this.cartList.push(cartProduct);
+  //   this.cart$.next(this.cartList);
+  // }
 
-  getCartList() {
-    return this.cart$.asObservable();
-  }
+  // getCartList() {
+  //   return this.cart$.asObservable();
+  // }
 
 }
